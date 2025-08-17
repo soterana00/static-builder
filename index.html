@@ -1,0 +1,662 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jarton — Animated Minecraft Builder Portfolio</title>
+  <meta name="description" content="ASMR-level, ultra-animated Minecraft builder portfolio with glassmorphism, particles, parallax, and a curated gallery." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+  
+  <!-- Styles -->
+ <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Ambient noise texture overlay -->
+  <div class="noise" aria-hidden="true"></div>
+
+  <!-- Cursor halo -->
+  <div class="cursor-halo" id="cursorHalo" aria-hidden="true"></div>
+
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#top" class="brand link" aria-label="Home">
+        <span class="cube" aria-hidden="true"></span>
+        <span>Static | Builder</span>
+        <span class="underline" aria-hidden="true"></span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#work">Work</a>
+        <a href="#projects">Featured</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-cta">
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+        <button class="button" id="hireBtn">Hire Me</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="top">
+    <div class="bg-fx"></div>
+    <div class="rings"></div>
+
+    <!-- Parallax decorative blocks -->
+    <div class="parallax" aria-hidden="true">
+      <div class="layer" data-depth="0.05" style="left:6%; top:18%">
+        <div class="block grass"></div>
+      </div>
+      <div class="layer" data-depth="0.08" style="right:12%; top:10%">
+        <div class="block stone"></div>
+      </div>
+      <div class="layer" data-depth="0.12" style="left:20%; bottom:12%">
+        <div class="block dirt"></div>
+      </div>
+      <div class="layer" data-depth="0.16" style="right:18%; bottom:8%">
+        <div class="block grass"></div>
+      </div>
+    </div>
+
+    <div class="container hero-inner">
+      <div class="stack">
+        <h1 class="grad">Minecraft Builder • Cinematic Worlds • Cozy Vibes</h1>
+        <p>
+          I design and build immersive, story-driven Minecraft environments—
+          from serene survival spawns to complex RPG hubs
+        </p>
+        <div class="cta-row">
+          <a class="button" href="#work">See My Work</a>
+          <a class="btn-ghost" href="#contact">Let's Collaborate</a>
+          <span class="mini-stat"><strong>50+</strong> Builds</span>
+          <span class="mini-stat"><strong>4+ yrs</strong> Craft</span>
+        </div>
+
+        <div class="badges-row">
+          <span class="badge shiny">Voxel Art</span>
+          <span class="badge">Organic</span>
+          <span class="badge">Terra</span>
+          <span class="badge">RPG Hubs</span>
+          <span class="badge">Cinematics</span>
+        </div>
+      </div>
+
+      <div class="hero-card hover-3d">
+        <div class="hero-preview shimmer" id="heroPreview">
+          <div class="voxel v1"></div>
+          <div class="voxel v2"></div>
+          <div class="voxel v3"></div>
+          <div class="voxel v4"></div>
+          <div class="voxel v5"></div>
+          <div class="voxel v6"></div>
+          <div class="voxel v7"></div>
+          <div class="voxel v8"></div>
+          <div class="voxel v9"></div>
+          <div class="voxel v10"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="work">
+    <div class="container stack">
+      <div>
+        <h2 class="section-title">Showcase Gallery</h2>
+        <p class="section-sub">Here Some Of My <code>Recent Builds</code> , Enjoy.</p>
+      </div>
+
+      <div class="gallery" id="gallery">
+        <!-- 1 -->
+        <figure class="gallery-item img-slot-1 zoomable hover-lift large" data-title="RPG Hub — HoneyHub" data-tags="hub,rpg,spawn" tabindex="0">
+          <div class="info">
+            <figcaption class="title">Honey Spawn</figcaption>
+            <div class="chips">
+              <span class="chip">RPG</span>
+              <span class="chip">Spawn</span>
+              <span class="chip">Cinematic</span>
+            </div>
+          </div>
+        </figure>
+        <!-- 2 -->
+        <figure class="gallery-item img-slot-2 zoomable hover-lift" data-title="Survival Spawn — Mossy Grove" data-tags="survival,spawn,grove" tabindex="0">
+          <div class="info">
+            <figcaption class="title">Mighty Knight</figcaption>
+            <div class="chips">
+              <span class="chip">Spawn</span>
+              <span class="chip">Survival</span>
+            </div>
+          </div>
+        </figure>
+        <!-- 3 -->
+        <figure class="gallery-item img-slot-3 zoomable hover-lift tall" data-title="Sky Island — Azure Chorus" data-tags="sky,island,parkour" tabindex="0">
+          <div class="info">
+            <figcaption class="title">Azure Chorus</figcaption>
+            <div class="chips">
+              <span class="chip">Sky</span>
+              <span class="chip">Island</span>
+            </div>
+          </div>
+        </figure>
+        <!-- 4 -->
+        <figure class="gallery-item img-slot-4 zoomable hover-lift" data-title="Desert Temple — Glass Mirage" data-tags="desert,temple,quest" tabindex="0">
+          <div class="info">
+            <figcaption class="title">DragonStage</figcaption>
+            <div class="chips">
+              <span class="chip">Temple</span>
+              <span class="chip">Quest</span>
+            </div>
+          </div>
+        </figure>
+        <!-- 5 -->
+        <figure class="gallery-item img-slot-5 zoomable hover-lift large" data-title="Frostkeep — Northern Bastion" data-tags="castle,snow,hub" tabindex="0">
+          <div class="info">
+            <figcaption class="title">Clock Tour</figcaption>
+            <div class="chips">
+              <span class="chip">2050</span>
+              <span class="chip">Clock</span>
+            </div>
+          </div>
+        </figure>
+        <!-- 6 -->
+        <figure class="gallery-item img-slot-6 zoomable hover-lift" data-title="Sunken Ruins — Tidal Echo" data-tags="ocean,ruins,adventure" tabindex="0">
+          <div class="info">
+            <figcaption class="title">Classic Dragon Spawn</figcaption>
+            <div class="chips">
+              <span class="chip">Classic</span>
+              <span class="chip">Spawn</span>
+            </div>
+          </div>
+        </figure>
+        <!-- 7 -->
+        <figure class="gallery-item img-slot-7 zoomable hover-lift" data-title="Nether Spire — Crimson Vault" data-tags="nether,fortress,raid" tabindex="0">
+          <div class="info">
+            <figcaption class="title">Heaven V Hell</figcaption>
+            <div class="chips">
+              <span class="chip">Nether</span>
+              <span class="chip">Hell & Heaven</span>
+            </div>
+          </div>
+        </figure>
+        <!-- 8 -->
+        <figure class="gallery-item img-slot-8 zoomable hover-lift tall" data-title="Cherry Shrine — Blossom Path" data-tags="shrine,asia,garden" tabindex="0">
+          <div class="info">
+            <figcaption class="title">>Heaven V Hell</figcaption>
+            <div class="chips">
+              <span class="chip">Nether</span>
+              <span class="chip">Hell & Heaven</span>
+            </div>
+          </div>
+        </figure>
+        <!-- 9 -->
+        <figure class="gallery-item img-slot-9 zoomable hover-lift" data-title="Steampunk Docks — Brass Tide" data-tags="steampunk,docks,market" tabindex="0">
+          <div class="info">
+            <figcaption class="title">Farm Spawn</figcaption>
+            <div class="chips">
+              <span class="chip">Farm</span>
+              <span class="chip">Garden</span>
+            </div>
+          </div>
+        </figure>
+        <!-- 10 -->
+        <figure class="gallery-item img-slot-10 zoomable hover-lift" data-title="Jungle Ruins — Lush Spiral" data-tags="jungle,ruins,adventure" tabindex="0">
+          <div class="info">
+            <figcaption class="title">Jungle Castle</figcaption>
+            <div class="chips">
+              <span class="chip">Jungle</span>
+              <span class="chip">Ruins</span>
+            </div>
+          </div>
+        </figure>
+        <!-- 11 -->
+        <figure class="gallery-item img-slot-11 zoomable hover-lift large" data-title="Sky Temple — Amethyst Crown" data-tags="temple,amethyst,parkour" tabindex="0">
+          <div class="info">
+            <figcaption class="title">Classic</figcaption>
+            <div class="chips">
+              <span class="chip">Temple</span>
+              <span class="chip">Sky</span>
+            </div>
+          </div>
+        </figure>
+        <!-- 12 -->
+        <figure class="gallery-item img-slot-12 zoomable hover-lift" data-title="Volcanic Forge — Obsidian Bloom" data-tags="volcano,forge,pve" tabindex="0">
+          <div class="info">
+            <figcaption class="title">Spring</figcaption>
+            <div class="chips">
+              <span class="chip"></span>
+              <span class="chip"></span>
+            </div>
+          </div>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="projects">
+    <div class="container project">
+<div class="shot shimmer img-slot-5 hover-3d" 
+     role="img" 
+     aria-label="Featured project screenshot" 
+     id="mediaContainer">
+</div>
+
+<script>
+  function setMedia(containerId, filePath) {
+    const container = document.getElementById(containerId);
+    container.innerHTML = ""; 
+
+    const ext = filePath.split('.').pop().toLowerCase();
+
+    if (ext === "mp4") {
+      const video = document.createElement("video");
+      video.autoplay = true;
+      video.muted = true;
+      video.loop = true;
+      video.playsInline = true;
+      video.className = "bg-video";
+
+      const source = document.createElement("source");
+      source.src = filePath;
+      source.type = "video/mp4";
+
+      video.appendChild(source);
+      container.appendChild(video);
+    } else if (ext === "gif") {
+      const img = document.createElement("img");
+      img.src = filePath;
+      img.alt = "Animated GIF";
+      img.className = "bg-gif";
+      container.appendChild(img);
+    } else {
+      container.textContent = "Unsupported file format";
+    }
+  }
+
+  setMedia("mediaContainer", "./assets/3d.gif"); 
+
+</script>
+
+<style>
+  .bg-video, .bg-gif {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+  }
+</style>
+
+
+
+      <div class="meta">
+        <h2 class="section-title">Featured: Build</h2>
+        <p class="section-sub">
+          Cinematic hub designed
+        </p>
+
+        <div class="kpi">
+          <div class="k">
+            <div class="n">120k+</div>
+            <div class="l">Blocks Placed</div>
+          </div>
+          <div class="k">
+            <div class="n">60 FPS</div>
+            <div class="l">Cinematic Flythrough</div>
+          </div>
+          <div class="k">
+            <div class="n">15</div>
+            <div class="l">Unique Zones</div>
+          </div>
+        </div>
+
+        <div class="cta">
+          <button class="btn-ghost" id="playDemo">
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section overlay-soft" aria-label="Stats">
+    <div class="container stats">
+      <div class="stat">
+        <div class="value">4+ yrs</div>
+        <div class="label">Experience</div>
+      </div>
+      <div class="stat">
+        <div class="value">50+</div>
+        <div class="label">Projects</div>
+      </div>
+      <div class="stat">
+        <div class="value">7</div>
+        <div class="label">Game Modes</div>
+      </div>
+      <div class="stat">
+        <div class="value">∞</div>
+        <div class="label">Cozy Vibes</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section" id="about">
+    <div class="container split">
+      <div class="about-box">
+        <h2 class="section-title">About the Builder</h2>
+        <p>
+          I'm a detail-obsessed Minecraft builder focused on flow and atmosphere.
+          My process combines block-by-block craftsmanship with tool-assisted
+          terraforming (WorldEdit, VoxelSniper, Terra) to create 
+          smooth traversal and cinematic scenes.
+        </p>
+        <div class="divider"></div>
+        <div class="timeline">
+          <div class="tline">
+            <strong>2019</strong> — 
+          </div>
+          <div class="tline">
+            <strong>2021</strong> — 
+          </div>
+          <div class="tline">
+            <strong>2023</strong> — 
+          </div>
+          <div class="tline">
+            <strong>2025</strong> — 
+          </div>
+        </div>
+      </div>
+
+      <div class="stack">
+        <div class="card edge-glow">
+          <div class="shine" aria-hidden="true"></div>
+          <h3>Skills</h3>
+          <div class="tags">
+            <span class="tag">WorldEdit</span>
+            <span class="tag">VoxelSniper</span>
+            <span class="tag">Terra</span>
+            <span class="tag">Replay Mod</span>
+            <span class="tag">Shaders</span>
+            <span class="tag">Optimization</span>
+          </div>
+          <div class="sep"></div>
+          <div class="progress" aria-label="Build polish">
+            <div class="bar" style="width: 86%"></div>
+          </div>
+        </div>
+
+        <div class="accordion" id="faq">
+          <div class="acc-item">
+            <button class="acc-head">
+              <span>Do you accept server commissions?</span>
+              <span>+</span>
+            </button>
+            <div class="acc-body"><div>
+
+            </div></div>
+          </div>
+
+          <div class="acc-item">
+            <button class="acc-head">
+              <span>What files do you deliver?</span>
+              <span>+</span>
+            </button>
+            <div class="acc-body"><div>
+
+            </div></div>
+          </div>
+
+          <div class="acc-item">
+            <button class="acc-head">
+              <span>Do you offer revisions?</span>
+              <span>+</span>
+            </button>
+            <div class="acc-body"><div>
+            </div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section overlay-soft" id="testimonials">
+    <div class="container list-grid">
+      <article class="list-item testimonial">
+        <div class="avatar img-slot-2" aria-hidden="true"></div>
+        <div>
+          <h3>Server Owner — NorthRealm</h3>
+          <p>
+            “The build is gorgeous and super readable. Players found their way
+            instantly. The vibe is *chef's kiss*.”
+          </p>
+        </div>
+      </article>
+      <article class="list-item testimonial">
+        <div class="avatar img-slot-6" aria-hidden="true"></div>
+        <div>
+          <h3>Community Manager — Brass Docks</h3>
+          <p>
+            “He delivers like a studio. Clean schematics, smart paths, and
+            cinematic angles that make trailers easy.”
+          </p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Tech / Tabs -->
+  <section class="section" id="tech">
+    <div class="container tabs">
+      <div class="tab-list" role="tablist">
+        <button class="tab active" role="tab" aria-selected="true" aria-controls="tab1">Pipeline</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="tab2">Tools</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="tab3">Delivery</button>
+      </div>
+
+      <div class="tab-panels">
+        <div id="tab1" class="tab-panel active" role="tabpanel">
+          <div class="stack">
+            <div class="figure">
+              <div class="img-slot-1 shimmer" style="aspect-ratio:16/9; border-radius:16px; border:1px solid rgba(255,255,255,.14);"></div>
+              <p class="figcap">Concept → Greybox → Polish → Lighting → Cinematics</p>
+            </div>
+            <div class="steps">
+              <div class="step">
+                <div class="dot"></div>
+                <div>Moodboard & theme alignment</div>
+              </div>
+              <div class="step">
+                <div class="dot"></div>
+                <div>Greybox pathing & scale checks</div>
+              </div>
+              <div class="step">
+                <div class="dot"></div>
+                <div>Detail pass + readability</div>
+              </div>
+              <div class="step">
+                <div class="dot"></div>
+                <div>Shader lighting & flythrough</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="tab2" class="tab-panel" role="tabpanel">
+          <div class="stack">
+            <div class="ghost">
+
+            </div>
+          </div>
+        </div>
+
+        <div id="tab3" class="tab-panel" role="tabpanel">
+          <div class="stack">
+            <div class="table-wrap">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Asset</th>
+                    <th>Format</th>
+                    <th>Notes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ribbon CTA -->
+  <section class="section">
+    <div class="container ribbon">
+      <div class="shine" aria-hidden="true"></div>
+      <div class="row">
+        <h3 class="grad" style="margin:0">Need a cinematic hub that feels cozy?</h3>
+        <div class="cta">
+          <a class="button" href="#contact">Start a Project</a>
+          <span class="badge">Avg. 1–3 weeks</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section" id="contact">
+    <div class="container split">
+      <div class="about-box">
+        <h2 class="section-title">Contact</h2>
+        <p class="section-sub">Tell me your theme, size, and target performance. I’ll reply with a scoped quote.</p>
+
+        <form id="contactForm" class="stack" autocomplete="off">
+          <div class="field">
+            <input class="input" id="name" name="name" placeholder=" " required />
+            <label for="name">Name</label>
+          </div>
+          <div class="field">
+            <input class="input" id="email" name="email" type="email" placeholder=" " required />
+            <label for="email">Email</label>
+          </div>
+          <div class="field">
+            <input class="input" id="theme" name="theme" placeholder=" " />
+            <label for="theme">Theme (e.g., Steampunk Docks)</label>
+          </div>
+          <div class="field">
+            <select class="select" id="size" name="size">
+              <option value="">Size</option>
+              <option>Small (50×50)</option>
+              <option>Medium (150×150)</option>
+              <option>Large (300×300+)</option>
+            </select>
+          </div>
+          <div class="field">
+            <textarea class="textarea" id="details" name="details" placeholder=" "></textarea>
+            <label for="details">Details</label>
+          </div>
+          <div class="cta">
+            <button class="button" type="submit">Send</button>
+            <button class="btn-outline" type="reset">Reset</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="stack">
+        <div class="ghost">
+          <h3>Quick Links</h3>
+          <div class="badges-row">
+            <a class="badge link" href="#work">Gallery</a>
+            <a class="badge link" href="#projects">Featured</a>
+            <a class="badge link" href="#tech">Pipeline</a>
+          </div>
+        </div>
+        <div class="card hover-lift">
+          <div class="line" aria-hidden="true"></div>
+          <h3>Availability</h3>
+          <p class="section-sub">Booking 1–2 projects / month</p>
+          <div class="accent-bar" aria-hidden="true"></div>
+        </div>
+        <div class="ghost">
+          <h3>Credits</h3>
+          <div class="credits">
+            <span class="credit">WorldEdit</span>
+            <span class="credit">VoxelSniper</span>
+            <span class="credit">Replay Mod</span>
+            <span class="credit">Shaders</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-grid">
+      <div class="footer-col large">
+        <div class="brand" style="margin-bottom:8px">
+          <span class="cube" aria-hidden="true"></span>
+          <span>Static | Builder</span>
+        </div>
+        <p class="footer-note">Cozy, cinematic Minecraft worlds crafted with love.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <div class="stack">
+          <a class="link" href="#work">Work <span class="underline"></span></a>
+          <a class="link" href="#about">About <span class="underline"></span></a>
+          <a class="link" href="#contact">Contact <span class="underline"></span></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Social</h4>
+        <div class="row">
+          <a class="icon-btn" href="#" aria-label="YouTube">YT</a>
+          <a class="icon-btn" href="#" aria-label="Twitter">X</a>
+          <a class="icon-btn" href="#" aria-label="Discord">DC</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Action Button -->
+  <button class="fab" id="scrollTop" aria-label="Back to top">↑</button>
+
+  <!-- Lightbox Modal -->
+  <div class="modal" id="lightbox" aria-hidden="true">
+    <div class="modal-panel">
+      <header class="modal-header row">
+        <strong id="lightboxTitle">Title</strong>
+        <button class="btn-ghost" id="closeLightbox">Close</button>
+      </header>
+      <div class="modal-body">
+        <div class="slider" id="lightboxSlider">
+          <div class="slider-track" id="lightboxTrack">
+            <!-- Slides injected by JS using gallery order -->
+          </div>
+        </div>
+      </div>
+      <footer class="modal-footer row">
+        <button class="btn-outline" id="prevSlide">Prev</button>
+        <button class="button" id="nextSlide">Next</button>
+      </footer>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast" role="status" aria-live="polite">Message sent ✓</div>
+
+  <!-- Scripts (will be provided in response 3/3) -->
+  <script defer src="script.js"></script>
+</body>
+</html>
+
