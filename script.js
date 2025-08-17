@@ -379,7 +379,7 @@ function init() {
   initAccordions();
   initContact();
   initFab();
-  initSmall();
+  
   animateVoxels();
 
   // small accessibility / focus helpers
@@ -404,3 +404,4 @@ if (document.readyState === 'loading') {
 } else {
   init();
 }
+
