@@ -1,17 +1,17 @@
 
 const IMG_SLOTS = {
   "img-slot-1":  "./assets/jartonlobby.png",
-  "img-slot-2":  "./assets/koth.png",
+  "img-slot-2":  "./assets/Koth.png",
   "img-slot-3":  "./assets/koth2.png",
   "img-slot-4":  "./assets/newstyle2.png",
-  "img-slot-5":  "./assets/clocktour.png",
-  "img-slot-6":  "./assets/classicxdragon.png",
-  "img-slot-7":  "./assets/heavenvhell2.png",
-  "img-slot-8":  "./assets/heavenvhell.png",
+  "img-slot-5":  "./assets/Clocktour.png",
+  "img-slot-6":  "./assets/ClassicXDragon.png",
+  "img-slot-7":  "./assets/HeavenVHell2.png",
+  "img-slot-8":  "./assets/HeavenvHell.png",
   "img-slot-9":  "./assets/farm.png",
   "img-slot-10": "./assets/castle.png",
-  "img-slot-11": "./assets/classicspawn.png",
-  "img-slot-12": "./assets/spring.png"
+  "img-slot-11": "./assets/Classicspawn.png",
+  "img-slot-12": "./assets/Spring.png"
 };
 
 
@@ -404,4 +404,5 @@ if (document.readyState === 'loading') {
 } else {
   init();
 }
+
 
